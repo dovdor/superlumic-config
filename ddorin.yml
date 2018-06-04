@@ -35,6 +35,15 @@
         repo: github-personal:dovdor/vim-prefs.git
         dest: ~/Projects/personal/vim-prefs
         update: yes
+    - name: link vim configuration
+      file:
+        src: "~/Projects/personal/vim-prefs/{{ item }}"
+        dest: "~/{{ item }}"
+        state: link
+      with_items:
+        - .vim
+        - .vimrc
+        - .vimspelladdition.add
 
 #  vars:
 #    - computername: moneta
