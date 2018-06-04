@@ -11,4 +11,6 @@ Host github-private
 	HostName github.com
 	IdentityFile ~/.ssh/id_personal
 	IdentitiesOnly yes
+
+Host github.com
 	ControlMaster no
