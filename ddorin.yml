@@ -32,8 +32,8 @@
         dest: ~/.ssh/config
     - name: pull vim-prefs
       git:
-        repo: github-private:dovdor/vim-prefs.git
-        dest: ~/Projects/private/vim-prefs
+        repo: github-personal:dovdor/vim-prefs.git
+        dest: ~/Projects/personal/vim-prefs
         update: yes
 
 #  vars:
