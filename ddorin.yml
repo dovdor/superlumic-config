@@ -41,13 +41,12 @@
         state: absent
       with_items:
         - .vim
-        - .vimrc
-        - .vimspelladdition.add
     - name: link vim configuration
       file:
         src: "~/Projects/personal/vim-prefs/{{ item }}"
         dest: "~/{{ item }}"
         state: link
+        force: yes
       with_items:
         - .vim
         - .vimrc
