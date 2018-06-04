@@ -30,6 +30,11 @@
       copy:
         src: files/ssh_config
         dest: ~/.ssh/config
+    - name: pull vim-prefs
+      git:
+        repo: github-private:dovdor/vim-prefs.git
+	dest: ~/Projects/private/vim-prefs
+        update: yes
 
 #  vars:
 #    - computername: moneta
