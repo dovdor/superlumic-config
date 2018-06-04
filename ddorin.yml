@@ -35,6 +35,14 @@
         repo: github-personal:dovdor/vim-prefs.git
         dest: ~/Projects/personal/vim-prefs
         update: yes
+    - name: remove current vim configuration
+      file:
+        path: "~/{{ item }}"
+        state: absent
+      with_items:
+        - .vim
+        - .vimrc
+        - .vimspelladdition.add
     - name: link vim configuration
       file:
         src: "~/Projects/personal/vim-prefs/{{ item }}"
