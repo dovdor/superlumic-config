@@ -1,2 +1,7 @@
 ---
 
+- src: https://github.com/elliotweiser/ansible-osx-command-line-tools.git
+  name: ansible-osx-command-line-tools
+
+- src: https://github.com/geerlingguy/ansible-role-homebrew.git
+  name: ansible-role-homebrew

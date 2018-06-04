@@ -3,6 +3,21 @@
 - hosts: localhost
   connection: local
 
+  vars:
+    homebrew_installed_packages:
+      - bash
+      - git
+      - ssh-copy-id
+      - the_silver_searcher
+      - trash
+      - vim
+    homebrew_taps:
+      - homebrew/core
+    homebrew_cask_apps: []
+
+  pre_tasks:
+    - import_role:
+        name: ansible-role-homebrew
   tasks:
     - name: create ssh directory
       file:
@@ -16,10 +31,6 @@
         src: files/ssh_config
         dest: ~/.ssh/config
 
-#  roles:
-#    - profile-all
-#    - profile-developer
-#
 #  vars:
 #    - computername: moneta
 #    - git_user_name: Roderik van der Veer
