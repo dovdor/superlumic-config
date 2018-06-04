@@ -33,7 +33,7 @@
     - name: pull vim-prefs
       git:
         repo: github-private:dovdor/vim-prefs.git
-	dest: ~/Projects/private/vim-prefs
+        dest: ~/Projects/private/vim-prefs
         update: yes
 
 #  vars:
