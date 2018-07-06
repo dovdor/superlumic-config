@@ -4,20 +4,26 @@
   connection: local
 
   vars:
+    homebrew_taps:
+      - homebrew/core
+      - homebrew/cask
     homebrew_installed_packages:
       - bash
       - git
+      - mas
       - ssh-copy-id
       - the_silver_searcher
       - trash
       - vim
-    homebrew_taps:
-      - homebrew/core
-    homebrew_cask_apps: []
+      - zsh
+    homebrew_cask_apps:
+      - iterm2
+      - font-fira-code
 
   pre_tasks:
     - import_role:
         name: ansible-role-homebrew
+
   tasks:
     - name: create ssh directory
       file:
