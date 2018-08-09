@@ -57,6 +57,11 @@
         - .vim
         - .vimrc
         - .vimspelladdition.add
+    - name: pull shell-prefs
+      git:
+          repo: github-personal:dovdor/shell-prefs.git
+          dest: ~/Projects/personal/shell-prefs
+          update: yes
 
 #  vars:
 #    - computername: moneta
