@@ -17,12 +17,19 @@
       - vim
       - zsh
     homebrew_cask_apps:
-      - iterm2
-      - font-fira-code
+      - hyper
+    osx_defaults:
+          # allow keyrepeat
+          - domain: 'co.zeit.hyper'
+            key: 'ApplePressAndHoldEnabled'
+            type: boolean
+            value: false
 
   pre_tasks:
     - import_role:
         name: ansible-role-homebrew
+    - import_role:
+        name: roderik.superlumic-osx-defaults
 
   tasks:
     - name: create ssh directory

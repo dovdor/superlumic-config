@@ -5,3 +5,6 @@
 
 - src: https://github.com/geerlingguy/ansible-role-homebrew.git
   name: ansible-role-homebrew
+
+- src: https://github.com/superlumic/ansible-role-osx-defaults.git
+  name: roderik.superlumic-osx-defaults
