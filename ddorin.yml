@@ -62,6 +62,15 @@
           repo: github-personal:dovdor/shell-prefs.git
           dest: ~/Projects/personal/shell-prefs
           update: yes
+    - name: install ohmyzsh
+      file:
+        src: "~/Projects/personal/shell-prefs/{{ item }}"
+        dest: "~/{{ item }}"
+        state: link
+        force: yes
+      with_items:
+        - .zshrc
+        - .oh-my-zsh
 
 #  vars:
 #    - computername: moneta
