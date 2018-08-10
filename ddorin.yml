@@ -81,7 +81,7 @@
     - name: install ohmyzsh customisations
       file:
         src: "~/Projects/personal/shell-prefs/oh-my-zsh-custom/{{ item }}"
-        dest: "~/.oh-my-zsh/custom/themes/{{ item }}"
+        dest: "~/.oh-my-zsh/custom/{{ item }}"
         state: link
         force: yes
       with_items:
