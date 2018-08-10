@@ -59,7 +59,6 @@
         src: "~/Projects/personal/vim-prefs/{{ item }}"
         dest: "~/{{ item }}"
         state: link
-        force: yes
       with_items:
         - .vim
         - .vimrc
@@ -74,15 +73,7 @@
         src: "~/Projects/personal/shell-prefs/{{ item }}"
         dest: "~/{{ item }}"
         state: link
-        force: yes
       with_items:
         - .zshrc
         - .oh-my-zsh
-    - name: install ohmyzsh customisations
-      file:
-        src: "~/Projects/personal/shell-prefs/oh-my-zsh-custom/{{ item }}"
-        dest: "~/.oh-my-zsh/custom/{{ item }}"
-        state: link
-        force: yes
-      with_items:
-        - blinks-patch.zsh
+        - .oh-my-zsh-custom
