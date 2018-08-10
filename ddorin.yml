@@ -77,3 +77,6 @@
         - .zshrc
         - .oh-my-zsh
         - .oh-my-zsh-custom
+    - name: zsh by default
+      shell: chsh -s /usr/local/bin/zsh
+      sudo: no
