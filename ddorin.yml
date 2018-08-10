@@ -79,4 +79,4 @@
         - .oh-my-zsh-custom
     - name: zsh by default
       shell: chsh -s /usr/local/bin/zsh {{ lookup('env', 'USER') }}
-      sudo: yes
+      become: yes
