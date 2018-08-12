@@ -14,7 +14,7 @@
       - ssh-copy-id
       - the_silver_searcher
       - trash
-      - vim
+      - { name: vim, install_options: "with-python@2" }
       - zsh
     homebrew_cask_apps:
       - hyper
